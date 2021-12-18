@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- CSS only -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+      <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <link rel="stylesheet" media="all" href="{{ url_for('static', filename='/style.css')}}">
+      <title>Web Crawler</title>
+
+    </head>
+
+    <body class="container">
+
+
+        <div class="jumbotron bg-dark text-white mt-1">
+            <h1 class="display-4 text-center">Web Crawler</h1>
+            <p class="lead">A Web crawler, sometimes called a spider or spiderbot and often shortened to crawler, is an Internet bot that systematically browses the World Wide Web, typically operated by search engines for the purpose of Web indexing (web spidering).
+                Web search engines and some other websites use Web crawling or spidering software to update their web content or indices of other sites' web content. Web crawlers copy pages for processing by a search engine, which indexes the downloaded pages so that users can search more efficiently.</p>
+            <hr class="my-4">
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Web_crawler" role="button">Learn more</a>
+            </p>
+          </div>
+
+
+          <!--form starts from here-->
+        <form action="/" class="form-horizontal" method="post">
+
+            <div class="form-group row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label badge badge-secondary col-form-label-lg"><h4>Enter url</h4></label>
+                <div class="col-sm-10">
+                  <input type="url" class="form-control form-control-lg" id="colFormLabelLg" name="url" placeholder="https://example.com" required>
+                </div>
+
+                <label style="margin-top:10px" for="colFormLabelLg1" class="col-sm-2 col-form-label badge badge-secondary col-form-label-lg"><h4>Enter Number</h4></label>
+                <div style="margin-top:10px" class="col-sm-10">
+                  <input type="number" class="form-control form-control-lg" id="colFormLabelLg1" name="num_of_links" placeholder="100" required>
+                </div>
+
+            </div>
+
+            <br/>
+
+            <div class="text-center">
+            <button type="submit" class="col-sm-4  btn btn-dark badge badge-pill btn-lg"><h4>Crawl</h4></button>
+            </div>
+
+        </form>
+    </body>
+
+</html>
